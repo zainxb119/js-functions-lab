@@ -184,14 +184,19 @@ Complete the exercise in the space below:
 */
 
 function basicCalculator(num1, num2, operation) {
-    if (operation.toLowerCase() === "add") 
-        return num1+num2;
-    else if (operation.toLowerCase() === "subtract") 
-        return num1-num2;
-    else if (operation.toLowerCase() === "multiply") 
-        return num1*num2;
-    else if (operation.toLowerCase() === "divide") 
-        return num1/num2;
+switch (operation.toLowerCase()) {
+    case "add":
+        return num1 + num2;
+    case "subtract":
+        return num1 - num2;
+    case "multiply":
+        return num1 * num2;
+    case "divide":
+        return num1 / num2;
+    default:
+        return null;
+}
+
 }
 
 
@@ -213,18 +218,18 @@ Complete the exercise in the space below:
 */
 
 function calculateGrade(grade) {
-    switch(grade) {
-        case grade >= 90:
-            return 'A';
-        case grade >= 80:
-            return 'B';
-        case grade >= 70:
-            return 'C';
-        case grade >= 60:
-            return 'D';
-        default: 
-            return 'F';
+    if (grade >= 90) {
+    return 'A';
+    } else if (grade >= 80) {
+        return 'B';
+    } else if (grade >= 70) {
+        return 'C';
+    } else if (grade >= 60) {
+        return 'D';
+    } else {
+        return 'F';
     }
+
 }
 
 
